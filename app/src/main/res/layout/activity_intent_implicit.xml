@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntentImplicit">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/input_web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:hint="Masukkan URL : www.example.com" />
+            <Button
+                android:id="@+id/btn_web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="open web"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/input_web"
+                android:onClick="handlerBtnWeb"
+                />
+            <EditText
+                android:id="@+id/input_location"
+                android:hint="Masukkan Daerah : Surakarta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_below="@+id/btn_web"
+                />
+            <Button
+                android:id="@+id/btn_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="open location"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/input_location"
+                android:onClick="handlerBtnLocation"
+                />
+
+            <EditText
+                android:id="@+id/input_share_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_location"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:hint="Masukkan Text" />
+            <Button
+                android:id="@+id/btn_share_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="share text"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/input_share_text"
+                android:onClick="handlerBtnShareText"
+                />
+
+            <EditText
+                android:id="@+id/input_dial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_share_text"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:hint="Masukkan no hp : 0123456789012" />
+            <Button
+                android:id="@+id/btn_dial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dial"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/input_dial"
+                android:onClick="handlerDial"
+                />
+            <Button
+                android:id="@+id/btn_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="contact"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/btn_dial"
+                android:onClick="handlerContact"
+                />
+
+            <ImageView
+                android:id="@+id/image_camera_view"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/btn_contact"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="71dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="73dp"
+                android:src="@drawable/nodejs" />
+
+            <Button
+                android:id="@+id/btn_camera_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="open camera"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/image_camera_view"
+                android:onClick="handlerCamera"
+                />
+
+            <ImageView
+                android:id="@+id/image_selected_view"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/btn_camera_view"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="74dp"
+                android:src="@drawable/nodejs" />
+
+            <Button
+                android:id="@+id/btn_select_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="select image"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/image_selected_view"
+                android:onClick="handlerChangeImage"
+                />
+
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
